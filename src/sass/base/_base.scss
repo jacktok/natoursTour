@@ -8,10 +8,27 @@
 }
 
 html {
-  // thi defines what 1rem is
+  // thi defines what 1rem is 10px , default is 16px. so 62.5 = 10/16*100
   font-size: 62.5%;
+
+  @include respond(tab-port) {
+    font-size: 50%; // rem = 8px
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%; // rem = 9px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // rem = 12px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
+
+

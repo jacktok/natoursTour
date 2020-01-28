@@ -5,11 +5,16 @@
       to right,
       rgb($color-primary, .8),
       rgb($color-primary-dark, .8)
-  ), url("assets/img/hero.jpg");
+  ), url("~assets/img/hero.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;

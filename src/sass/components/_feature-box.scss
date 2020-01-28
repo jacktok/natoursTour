@@ -5,6 +5,10 @@
   text-align: center;
   border-radius: 3px;
 
+  @include respond(tab-port){
+    padding: 2rem;
+  }
+
   &__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -13,6 +17,11 @@
     -webkit-background-clip: text;
     color: transparent;
 
+
+
+    @include respond(tab-port){
+      padding: 2rem;
+    }
   }
 
   &:hover {
